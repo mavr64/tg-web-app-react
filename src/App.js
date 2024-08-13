@@ -10,10 +10,6 @@ function App() {
         tg.ready();
     })
 
-    const onClose = () => {
-      tg.close();
-    }
-    
   return (
       <div className="App">
           <header className="App-header">
@@ -30,6 +26,7 @@ function App() {
                   Learn React
               </a>
               <button onClick={onToggleButton}>Toggle</button>
+              <span className={'username'}>user?.username</span>
           </header>
       </div>
   );
