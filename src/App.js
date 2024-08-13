@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import {useEffect} from "react";
 import {useTelegram} from "./hooks/useTelegram";
+import Header from "./components/Header/Header";
 
 function App() {
     const {user, onToggleButton, tg} = useTelegram();
@@ -12,6 +13,7 @@ function App() {
 
   return (
       <div className="App">
+          <Header />
           <header className="App-header">
               <img src={logo} className="App-logo" alt="logo"/>
               <p>
