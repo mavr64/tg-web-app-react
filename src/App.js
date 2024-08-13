@@ -28,7 +28,7 @@ function App() {
               >
                   Learn React
               </a>
-              <button onClick={onClose}>Закрыть</button>
+
           </header>
       </div>
   );
