@@ -4,7 +4,7 @@ import {useEffect} from "react";
 import {useTelegram} from "./hooks/useTelegram";
 
 function App() {
-    const {onToggleButton, tg} = useTelegram();
+    const {user, onToggleButton, tg} = useTelegram();
 
     useEffect(() => {
         tg.ready();
@@ -26,7 +26,7 @@ function App() {
                   Learn React
               </a>
               <button onClick={onToggleButton}>Toggle</button>
-              <span className={'username'}>user?.username</span>
+              <span className={'username'}>{user?.username}</span>
           </header>
       </div>
   );
