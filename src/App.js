@@ -12,11 +12,10 @@ function App() {
 
     useEffect(() => {
         tg.ready();
-    })
+    }, [])
 
   return (
       <div className="App">
-          <Header />
           <header className="App-header">
               <img src={logo} className="App-logo" alt="logo"/>
               <p>
@@ -33,6 +32,7 @@ function App() {
               <button onClick={onToggleButton}>Toggle</button>
               <span className={'username'}>{user?.username}</span>
           </header>
+          <Header />
           <Routes>
               <Route index element={<ProductList />} />
               <Route path={'form'} element={<Form />} />
