@@ -1,8 +1,8 @@
-import React, {useState} from 'react';
+import React, {useState, useCallback, useEffect} from 'react';
 import './ProductList.css';
 import ProductItem from "../ProductItem/ProductItem";
 import {useTelegram} from "../../hooks/useTelegram";
-import {useCallback, useEffect} from "react";
+//import {useCallback, useEffect} from "react";
 
 const products = [
     {id: '1', title: 'Джинсы', price: 5000, description: 'Синего цвета, прямые'},
@@ -47,6 +47,8 @@ const ProductList = () => {
         }
     }, [onSendData])
 
+    /** Добавление товаров в Корзину
+     * */
     const onAdd = (product) => {
         const alreadyAdded = addedItems.find(item => item.id === product.id);
         let newItems = [];
